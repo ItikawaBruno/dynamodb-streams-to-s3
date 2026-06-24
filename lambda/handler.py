@@ -19,7 +19,8 @@ def lambda_handler(event, context):
             Key = f"eventos/{record['eventID']}.json",
             Body = arquivo
         )
-        
+        print("Teste")
+        print(f"Arquivo {record['eventID']}.json enviado para o bucket {BUCKET}")
         return {
             "statusCode": 200
         }
